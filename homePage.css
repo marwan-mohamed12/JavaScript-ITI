@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f8;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 4rem;
+    text-transform: capitalize;
+}
+
+.lablist {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 5rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 767px) {
+
+    .lablist {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+.lab {
+    background-color: white;
+    text-align: center;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    position: relative;
+}
+
+.lab span {
+    display: block;
+    background-color: #FCB447;
+    width: fit-content;
+    padding: 5px 10px;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.lab img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.labLink {
+    text-decoration: none;
+    color: white;
+    background: #FCB447;
+    padding: 7px;
+    border-radius: 10px;
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.lab h2 {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.lab h4 {
+    color: #617d98;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    letter-spacing: 2px;
+}
