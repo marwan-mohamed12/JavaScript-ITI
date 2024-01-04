@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2-Ex1</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .button {
+            padding: 15px 20px;
+            color: white;
+            background-color: #fcb447;
+            text-decoration: none;
+            display: block;
+            margin: 20px;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+            border-radius: 0.6rem;
+            letter-spacing: 1px;
+        }
+
+        .next {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .prev {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        @media (max-width: 767px) {
+            .button {
+                font-size: 15px;
+                width: 25%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="next button">Return To Homepage</a>
+    <script src="main.js"></script>
+</body>
+</html>
