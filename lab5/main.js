@@ -85,14 +85,14 @@ class Office {
     }
 }
 
-let employees = new Array(
-    new Employee( "Marwan Mohamed", 1000, "Happy", 100, "email@mail.com", "happy", 1000, false),
-    new Employee("abdo Mohamed", 1000, "Happy", 100, "email@mail.com", "happy", 1000, false),
-    new Employee("Mohamed", 1000, "Happy", 100, "email@mail.com", "happy", 1000, false),
-    new Employee("Abbas", 1000, "Happy", 100, "email@mail.com", "happy", 1000, true),
-    )
+// let employees = new Array(
+//     new Employee( "Marwan Mohamed", 1000, "Happy", 100, "email@mail.com", "happy", 1000, false),
+//     new Employee("abdo Mohamed", 1000, "Happy", 100, "email@mail.com", "happy", 1000, false),
+//     new Employee("Mohamed", 1000, "Happy", 100, "email@mail.com", "happy", 1000, false),
+//     new Employee("Abbas", 1000, "Happy", 100, "email@mail.com", "happy", 1000, true),
+//     )
 
-let  offices = [new Office("New-York", employees)];
+// let  offices = [new Office("New-York", employees)];
 // console.log(off.getAllEmployees());
 // console.log(off.getEmployee(2));
 // off.fire(3)
