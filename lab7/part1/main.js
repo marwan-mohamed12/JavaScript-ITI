@@ -4,6 +4,11 @@ let username = document.getElementById("username"),
     password = document.getElementById("password"),
     submitBtn = document.getElementById("submit");
 
+let credentials = {
+    username: "admin",
+    password: "123"
+};
+
 submitBtn.addEventListener("click", e => {
 
     e.preventDefault();
@@ -13,15 +18,15 @@ submitBtn.addEventListener("click", e => {
         return;
     }
 
-    if (username.value === "admin" && password.value !== "123" ||
-        username.value !== "admin" && password.value === "123") {
+    if (username.value === credentials.username && password.value !== credentials.password ||
+        username.value !== credentials.username && password.value === credentials.password) {
         showToast(errorToast)
         return;
     }
 
     document.body.innerHTML =`<div id="loading"></div>`;
 
-    if (username.value === "admin" && password.value === "123") {
+    if (username.value === credentials.username && password.value === credentials.password) {
         document.body.innerHTML = `
             <h1>Welcome ${username.value}</h1>
             <br/>
