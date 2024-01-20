@@ -22,8 +22,18 @@ submitBtn.addEventListener("click", e => {
     document.body.innerHTML =`<div id="loading"></div>`;
 
     if (username.value === "admin" && password.value === "123") {
-        document.body.innerHTML = `<h1>Welcome ${username.value}</h1>`;
+        document.body.innerHTML = `
+            <h1>Welcome ${username.value}</h1>
+            <br/>
+            <button class="backBtn" id="backBtn">Back</button>    
+        `;
         showToast(greenToast);
+        let backBtn = document.getElementById("backBtn");
+        backBtn.addEventListener('click', () => {
+            location.reload();
+        })
+
+        backBtn.removeEventListener('click', ()=>{});
         username.value = '';
         password.value = '';
 
