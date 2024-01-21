@@ -1,0 +1,90 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background-color: #F5F5F5;
+    width: 450px;
+    padding: 1.5em;
+    border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+    section {
+        width: 100%;
+        padding: 1em;
+    }
+}
+
+section .todo-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 2px;
+    border: 1px solid #E5E5E5;
+}
+
+section .todo-element .todo-btn {
+    display: flex;
+    column-gap: 5px;
+}
+
+section .todo-element .todo-btn button {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    border-color: transparent;
+    border-radius: 2px;
+}
+
+section .todo-element .todo-btn .check-btn {
+    background-color: #5CB85C;
+}
+
+section .todo-element .todo-btn .delete-btn {
+    background-color: #D9534F;
+}
+
+section.todo-element .todo-btn button i {
+    font-size: 20px !important;
+}
+
+section hr {
+    margin: 1.3em 0;
+    border: 1px solid #e9e8e8;
+}
+
+section form {
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    column-gap: 0.8em;
+}
+
+section form input[type=text] {
+    padding: 5px;
+    outline: none;
+    border: 1px solid #D7D7D7;
+    border-radius: 2px;
+}
+
+section form input[type=submit] {
+    padding: 5px 10px;
+    background-color: #337AB7;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
