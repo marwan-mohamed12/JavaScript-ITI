@@ -10,3 +10,4 @@ This Repo contains the solutions of JavaScript Labs
 - [Lab5](https://github.com/marwan-mohamed12/JavaScript-ITI/tree/main/lab5)
 - [Lab6](https://github.com/marwan-mohamed12/JavaScript-ITI/tree/main/lab6)
 - [Lab7](https://github.com/marwan-mohamed12/JavaScript-ITI/tree/main/lab7)
+- [Lab8](https://github.com/marwan-mohamed12/JavaScript-ITI/tree/main/lab8)
