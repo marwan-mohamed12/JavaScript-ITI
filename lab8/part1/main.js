@@ -39,12 +39,14 @@ let nextBtn = document.querySelector(".nextBtn"),
     prevBtn = document.querySelector(".prevBtn");
 
 nextBtn.addEventListener('click', () => {
-
     showSlider(++active);
-
 })
 
 
 prevBtn.addEventListener('click', () => {
     showSlider(--active);
 })
+
+setInterval(() => {
+    showSlider(++active);
+}, 2500);
