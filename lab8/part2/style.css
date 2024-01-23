@@ -1,0 +1,195 @@
+@font-face {
+    font-family: "digital-clock-regular";
+    src: url(fonts/digital-7.ttf);
+}
+
+@font-face {
+    font-family: "digital-clock-mono";
+    src: url(fonts/digital-7\ \(mono\).ttf);
+}
+
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #DAE2E6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3em;
+}
+
+.clock-container {
+    width: 400px;
+    height: 200px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.clock-container .clock {
+    height: 130px;
+    width: 330px;
+    background-color: #DDDDDD;
+    border-radius: 3px;
+    position: relative;
+}
+
+.clock-container .clock ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 1.3em;
+    margin: 8px 0px;
+}
+
+.clock-container .clock ul li {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    color: #bebebe;
+    font-size: 0.9em;
+    font-family: "digital-clock-mono";
+}
+
+.clock-container .clock ul li.active {
+    color: #636262;
+    font-weight: bold;
+}
+
+.clock-container .clock .clock-format {
+    text-align: center;
+    font-size: 4.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-container .clock .clock-format span {
+    font-family: "digital-clock-mono";
+}
+
+.clock-container .clock .am-pm {
+    font-family: "digital-clock-mono";
+    position: absolute;
+    bottom: 1.2em;
+    right: 1.2em;
+    font-weight: bold;
+}
+
+.clock-container .clock i {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    font-size: 1.2rem;
+    color: #bebebe;
+}
+
+
+/* --------------------------------------------------------------------- */
+
+.alarm-container {
+    background-color: white;
+    width: 400px;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-bottom: 5em;
+
+}
+
+.alarm-container h2 {
+    margin-bottom: 2em;
+    color: #727274;
+}
+
+.alarm-container .time-container {
+    display: flex;
+    column-gap: 1em;
+    margin-bottom: 2em;
+}
+
+.alarm-container .time-container div {
+    text-align: center;
+    color: #838383;
+    background-color: #F4F4F4;
+    padding: 1em;
+}
+
+.alarm-container .time-container div h5 {
+    margin-bottom: 0.6em;
+}
+
+.alarm-container .time-container div input {
+    width: 5em;
+    height: 2em;
+    border-color: transparent;
+    border-radius: 4px;
+}
+
+.alarm-container .time-container div input:focus {
+    outline: none;
+    border: 1px solid #83D3E4;
+}
+
+.alarm-container .btn-container button {
+    border-color: transparent;
+    color: white;
+    padding: 1.2em 2em;
+    border-radius: 3px;
+}
+
+.alarm-container .btn-container .set {
+    background-color: #83D3E4;
+    margin-right: 5px;
+}
+.alarm-container .btn-container .clear {
+    background-color: #F2A6B4;
+}
+
+.button {
+    padding: 15px 20px;
+    color: white;
+    background-color: #fcb447;
+    text-decoration: none;
+    display: block;
+    margin: 20px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border-radius: 0.6rem;
+    letter-spacing: 1px;
+}
+
+.nextNavigate {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.previous {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media (max-width: 767px) {
+    .button {
+        font-size: 15px;
+        width: 25%;
+    }
+}
