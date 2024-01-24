@@ -18,7 +18,7 @@ export let greenToast = `
         </div>
         <div class="toast__content">
             <p class="toast__type">Success</p>
-            <p class="toast__message">You have successfully logged in.</p>
+            <p class="toast__message">You have successfully matched the pattern.</p>
         </div>
         <div class="toast__close">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.642 15.642"

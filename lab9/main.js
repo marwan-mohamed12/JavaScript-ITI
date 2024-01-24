@@ -9,55 +9,59 @@ let credentials = {
     password: "123"
 };
 
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
 submitBtn.addEventListener("click", e => {
 
     e.preventDefault();
+
+    document.querySelectorAll(".error-message").forEach(ele => {
+        ele.remove();
+    })
 
     if (username.value === '' || password.value === '') {
         showToast(alarmToast);
         return;
     }
 
-    if (username.value === credentials.username && password.value !== credentials.password ||
-        username.value !== credentials.username && password.value === credentials.password) {
-        showToast(errorToast)
+
+
+    if (!emailRegex.test(username.value)){
+        document.getElementById("username").insertAdjacentHTML('afterend', `
+        
+        <p class="error-message">
+            <i class="fa-solid fa-circle-xmark"></i>
+            Email should be email@mail.com
+        </p>
+        
+        `);
         return;
     }
 
-    document.body.innerHTML =`<div id="loading"></div>`;
-
-    if (username.value === credentials.username && password.value === credentials.password) {
-        document.body.innerHTML = `
-            <h1>Welcome ${username.value}</h1>
-            <br/>
-            <button class="backBtn" id="backBtn">Back</button>    
-        `;
-        showToast(greenToast);
-        let backBtn = document.getElementById("backBtn");
-        backBtn.addEventListener('click', () => {
-            location.reload();
-        })
-
-        backBtn.removeEventListener('click', ()=>{});
-        username.value = '';
-        password.value = '';
-
-    } else {
-        document.body.innerHTML = `
-        <h1>User Is Not Registered</h1>
-        <br/>
-        <button class="backBtn" id="backBtn">Back</button>
-        `;
-        showToast(infoToast);
-        username.value = '';
-        password.value = '';
-
-        let backBtn = document.getElementById("backBtn");
-        backBtn.addEventListener('click', () => {
-            location.reload();
-        })
-
-        backBtn.removeEventListener('click', ()=>{});
+    if (!passwordRegex.test(password.value)) {
+        document.getElementById("password").insertAdjacentHTML('afterend', `
+        
+        <p class="error-message">
+            <i class="fa-solid fa-circle-xmark"></i>
+            contain capital, small letters. 
+        </p>
+        <p class="error-message">
+            <i class="fa-solid fa-circle-xmark"></i>
+            contain numbers. 
+        </p>
+        <p class="error-message">
+            <i class="fa-solid fa-circle-xmark"></i>
+            8 characters or more.
+        </p>
+        
+        `);
     }
+
+    if (emailRegex.test(username.value) && passwordRegex.test(password.value)) {
+        showToast(greenToast);
+        username.value = '';
+        password.value = '';
+    }
+
 });
 
