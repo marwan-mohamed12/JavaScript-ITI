@@ -1,12 +1,15 @@
 let todos = [],
     id = 0;
 
-let todosList = JSON.parse(localStorage.getItem("Todos"));
+if (localStorage.getItem("Todos")) {
 
-if (todosList.length) {
-    todos = [...todosList];
-    console.log(todos[todos.length - 1]);
-    id = todos[todos.length - 1].id;
+    let todosList = JSON.parse(localStorage.getItem("Todos"));
+
+    if (todosList.length) {
+        todos = [...todosList];
+        console.log(todos[todos.length - 1]);
+        id = todos[todos.length - 1].id;
+    }
 }
 
 // console.log(todos);
@@ -17,7 +20,7 @@ const taskName = document.getElementById("todo-text"),
 
 
 function ShowTodos() {
-    todos.forEach(({ id, taskText, complete }) => {
+    todos.forEach(({ id, taskText }) => {
         let task = `
                     <div class="todo-element" data=${id}>
                         <p>${taskText}</p>
@@ -62,7 +65,7 @@ ShowTodos();
 addBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
-    todos.push({ id: ++id, taskText: taskName.value, complete: false });
+    todos.push({ id: ++id, taskText: taskName.value });
 
     localStorage.removeItem("Todos");
     localStorage.setItem("Todos", JSON.stringify(todos));
