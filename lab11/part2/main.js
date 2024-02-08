@@ -26,6 +26,5 @@ async function getUsersData() {
     }); 
 }
 
-getUsersData();
-
+document.addEventListener('load', getUsersData());
 
